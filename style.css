@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Poppins', sans-serif;
+    background: linear-gradient(to right, #2C3E50, #4CA1AF);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; 
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #d3d2d2;
+    padding: 20px;
+    border-radius: 10px;
+    
+
+    
+}
+
+h1{
+     color: #2C3E50;
+     font-size: 2.5rem;
+     
+   
+    
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.container{
+    margin-top: 30px;
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    animation: fadeIn 1.5s ease-in;
+    /* opacity: 1; */
+}
+.input-container,
+.output-container {
+      background: rgb(195, 196, 196);
+      padding: 20px;
+      border-radius: 10px;
+      
+    }
+
+input[type="date"]{
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #bbbbbb;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2286f1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:active{
+    background-color: #6aafda;
+}
+
+
+.result{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 10px;
+    will-change: transform,opacity;
+}
+
+.box{
+    background-color: #bcbfbc;
+    padding: 20px;
+    width: 80px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    
+}
+
+
+.box span{
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+}

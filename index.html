@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age-calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"  href="calculator.png">
+</head>
+<body>
+    <!-- step 1 header part  -->
+    <header>
+        
+        <h1>Age Calculator</h1>
+    </header>
+
+    <!-- step 2 container  -->
+     <div class="container">
+        <!-- input container -->
+         <div class="input-container">
+            <label for="dob"><strong>Select your date of birth :</strong> </label><br><br>
+            <input type="date" id="dob">
+            <button onclick="calculateAge()">Calculate</button>
+
+         </div>
+
+         <!-- output container -->
+          <div class="output-container">
+            <strong>Your age is : </strong>
+
+            <div class="result">
+                <div class="box" id="years">0<span>Years</span></div>
+                <div class="box" id="months">0<span>Months</span></div>
+                <div class="box" id="days">0<span>Days</span></div>
+
+            </div>
+
+          </div>
+     </div>
+     
+     <!-- js code -->
+     <script>
+    function calculateAge() {
+      const dob = new Date(document.getElementById('dob').value);
+      const today = new Date();
+
+
+      if (isNaN(dob)) {
+        alert("Please select a valid date of birth.");
+        return;
+      }
+
+      let years = today.getFullYear() - dob.getFullYear();
+      let months = today.getMonth() - dob.getMonth();
+      let days = today.getDate() - dob.getDate();
+
+      if (days < 0) {
+        months--;
+        days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+      }
+
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+
+      document.getElementById('years').innerHTML = `${years}<span>Years</span>`;
+      document.getElementById('months').innerHTML = `${months}<span>Months</span>`;
+      document.getElementById('days').innerHTML = `${days}<span>Days</span>`;
+
+      
+    }
+  </script>
+    
+</body>
+</html>
