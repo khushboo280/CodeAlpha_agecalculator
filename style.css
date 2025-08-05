@@ -15,8 +15,8 @@ header{
     display: flex;
     justify-content: center;
     background: #d3d2d2;
-    padding: 20px;
-    border-radius: 10px;
+    /* padding: 10px; */
+    /* border-radius: 10px; */
     
 
     
@@ -30,10 +30,6 @@ h1{
     
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
 .container{
     margin-top: 30px;
     width: 90%;
@@ -41,9 +37,16 @@ h1{
     display: flex;
     flex-direction: column;
     gap: 30px;
+    /* animation: fadeIn 0.5s ease-in; */
     animation: fadeIn 1.5s ease-in;
     /* opacity: 1; */
 }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
 .input-container,
 .output-container {
       background: rgb(195, 196, 196);
